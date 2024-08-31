@@ -1,0 +1,30 @@
+<div class="container">
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Status</th>
+                <th scope="col">Created At</th>
+                <th scope="col">Start</th>
+                <th scope="col">Stop</th>
+                <th scope="col">Discharge</th>
+                <th scope="col">Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (vacuum of vacuums; track $index) {
+                <tr>
+                    <td>{{vacuum.id}}</td>
+                    <td>{{vacuum.name}}</td>
+                    <td>{{vacuum.vacuumStatus}}</td>
+                    <td>{{vacuum.createdTimestamp}}</td>
+                    <td><i class="bi bi-play"></i></td>
+                    <td><i class="bi bi-stop-circle"></i></td>
+                    <td><i class="bi bi-lightning-charge"></i></td>
+                    <td><i class="bi bi-x-square"></i></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

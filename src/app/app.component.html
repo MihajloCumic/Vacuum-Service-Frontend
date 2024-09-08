@@ -15,7 +15,7 @@
         <li ngbNavItem="vacuums-page">
             <a ngbNavLink routerLink="/vacuum-page" routerLinkActive="active">Vacuums</a>
         </li>
-        <li ngbNavItem="add-vacuums">
+        <li ngbNavItem="add-vacuums" *ngIf="canAddVacuums()">
             <a ngbNavLink routerLink="/add-vacuum" routerLinkActive="active">Add vacuums</a>
         </li>
         <li ngbNavItem="error-page">

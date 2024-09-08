@@ -1,2 +1,44 @@
+<div class="container">
+  <h1>Vacuums</h1>
+  <div *ngIf="canSearchVacuums()">
+      <h3>Search</h3>
+      <button *ngIf="!search" type="button" class="btn btn-primary mb-3" (click)="showSearch()">Show</button>
+      <button *ngIf="search" type="button" class="btn btn-primary mb-3" (click)="closeSearch()">Close</button>
+        <form class="my-form" *ngIf="search">
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" name="vacuumName" [(ngModel)]="name" placeholder="Vacuum name">
+            </div>
+            <div class="col form-check">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="stopped" value="option1" [(ngModel)]="isStopped">
+              <label class="form-check-label text-white" for="inlineCheckbox1">STOPPED</label>
+            </div>
+            <div class="col form-check">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="running" value="option2" [(ngModel)]="isRunning">
+              <label class="form-check-label text-white" for="inlineCheckbox2">RUNNING</label>
+            </div>
+            <div class="col form-check">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox3" name="discharged" value="option3" [(ngModel)]="isDischarged">
+              <label class="form-check-label text-white" for="inlineCheckbox3">DISCHARGING</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <p>From:</p>
+              <app-datepicker #datePickerFrom></app-datepicker>
+              <app-timepicker #timePickerFrom></app-timepicker>
+            </div>
+            <div class="col">
+              <p>To:</p>
+              <app-datepicker #datePickerTo></app-datepicker>
+              <app-timepicker #timePickerTo></app-timepicker>
+            </div>
+          </div>  
+          <div class="row">
+            <button type="button" class="btn btn-primary mb-3" (click)="searchVacuums()">Search</button>
+          </div>    
+        </form>
+        </div>
+    <app-vacuum-table></app-vacuum-table>
+</div>
 
-<app-vacuum-table></app-vacuum-table>

@@ -26,4 +26,10 @@ export class AppComponent {
 
   }
 
+  canAddVacuums(): boolean{
+    return !!localStorage
+      .getItem('authorization')
+      ?.includes('can_add_vacuums');
+  }
+
 }

@@ -1,1 +1,27 @@
-<p>add-vacuum works!</p>
+<div class="container d-flex justify-content-center">
+    <div>
+      <h1>Create vacuum</h1>
+      <div
+        class="container d-flex justify-content-center border-top border-bottom border-primary"
+      >
+        <form (submit)="addVacuum()">
+          <div class="mb-3 row">
+            <label for="exampleFormControlInput2" class="form-label"
+              >Vacuum name</label
+            >
+            <input
+              [(ngModel)]="vacuumName"
+              name="vacuumName"
+              type="text"
+              class="form-control my-field"
+              id="exampleFormControlInput2"
+              placeholder="Enter name"
+            />
+          </div>
+          <div class="mb-3 row">
+            <button type="submit" class="btn btn-primary mb-3">Add</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,22 @@
+h3{
+    color: whitesmoke;
+}
+
+h1{
+    color: #0d6efd;
+    border-bottom-width: 2;
+    border-bottom-style: solid;
+    border-bottom-color: #0d6efd ;
+}
+.my-form{
+    border-width: 1;
+    border-style: solid;
+    border-color: #0d6efd ;
+    border-radius: 25px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+p{
+    color: whitesmoke;
+}
